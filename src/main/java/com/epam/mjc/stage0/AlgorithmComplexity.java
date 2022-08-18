@@ -34,13 +34,13 @@ public class AlgorithmComplexity {
      * Return the complexity of a binary search.
      */
     public Complexity binarySorting() {
-        return Complexity.O_N;
+        return Complexity.O_LOG_N;
     }
 
     /**
      * Return the complexity of the twoCycleSorting algorithm.
      */
     public Complexity twoCycleSorting() {
-        return Complexity.O_FACTORIAL_N;
+        return Complexity.O_1;
     }
 }
