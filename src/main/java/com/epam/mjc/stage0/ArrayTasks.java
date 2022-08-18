@@ -1,7 +1,7 @@
 package com.epam.mjc.stage0;
 
 
-
+import java.util.Arrays;
 
 /**
  * Here are the tasks for working with the arrays.
@@ -10,7 +10,8 @@ package com.epam.mjc.stage0;
  */
 public class ArrayTasks {
     public static void main(String[] args) {
-
+        int[][] arr = {{1, 2, 3}, {-1000, -398}, {-18}, {2000, 1231, -1234, 135, 134, -1}};
+        System.out.println(Arrays.deepToString(sortRaggedArray(arr)));
     }
 
     /**
@@ -111,7 +112,7 @@ public class ArrayTasks {
     public static int[] getOnlyPositiveNumbers(int[] arr) {
         int negativesLenght = 0;
         for(int i = 0; i < arr.length; i++) {
-            if(arr[i] < 0) {
+            if(arr[i] <= 0) {
                 negativesLenght++;
                 for(int j = i; j < arr.length - 1; j++) {
                     arr[j] = arr[j+1];
