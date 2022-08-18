@@ -1,8 +1,5 @@
 package com.epam.mjc.stage0;
 
-
-import java.util.Arrays;
-
 /**
  * Here are the tasks for working with the arrays.
  * <p>
@@ -10,8 +7,7 @@ import java.util.Arrays;
  */
 public class ArrayTasks {
     public static void main(String[] args) {
-        int[][] arr = {{-695, 173, 970}, {-513, -48, 186, 939}, {-177, 300, 451}, {-472, 124, 831}, {-540, 189}};
-        System.out.println(Arrays.deepToString(sortRaggedArray(arr)));
+
     }
 
     /**
