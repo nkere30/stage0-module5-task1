@@ -10,8 +10,7 @@ import java.util.Arrays;
  */
 public class ArrayTasks {
     public static void main(String[] args) {
-        int[][] arr = {{1, 5}, {2, 0}, {1, 3, 6, 9, 15, 36}, {5, 15, 25}, {1000, -4, -18}};
-        System.out.println(Arrays.deepToString(sortRaggedArray(arr)));
+
     }
 
     /**
