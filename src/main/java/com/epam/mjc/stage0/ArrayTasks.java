@@ -1,6 +1,5 @@
 package com.epam.mjc.stage0;
 
-import java.util.Arrays;
 
 /**
  * Here are the tasks for working with the arrays.
@@ -9,18 +8,7 @@ import java.util.Arrays;
  */
 public class ArrayTasks {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(seasonsArray()));
-        System.out.println(Arrays.toString(generateNumbers(7)));
-        int [] totalSumArr = {1, 2, 3, 4, 5};
-        System.out.println(totalSum(totalSumArr));
-        int[] indexArr = {1, 2, 3, 5, 9};
-        System.out.println(findIndexOfNumber(indexArr, 9));
-        String[] strArr = {"Bob", "Nick"};
-        System.out.println(Arrays.toString(reverseArray(strArr)));
-        int[] positivesArr = {1, -8, 0, 5, -13, 1000, -213};
-        System.out.println(Arrays.toString(getOnlyPositiveNumbers(positivesArr)));
-        int[][] sortRagged = {{3, 1, 2,}, {3,2}, {1, 4, 9, 3, 15, 7}};
-        System.out.println(Arrays.deepToString(sortRaggedArray(sortRagged)));
+
     }
 
     /**
