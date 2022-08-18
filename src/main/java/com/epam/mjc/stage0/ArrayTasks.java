@@ -1,8 +1,6 @@
 package com.epam.mjc.stage0;
 
 
-import java.util.Arrays;
-
 /**
  * Here are the tasks for working with the arrays.
  * <p>
@@ -10,8 +8,7 @@ import java.util.Arrays;
  */
 public class ArrayTasks {
     public static void main(String[] args) {
-        int[][] arr = {{1, 2, 3}, {-1000, -398}, {-18}, {2000, 1231, -1234, 135, 134, -1}};
-        System.out.println(Arrays.deepToString(sortRaggedArray(arr)));
+
     }
 
     /**
@@ -110,18 +107,19 @@ public class ArrayTasks {
      * arr = [1, 2]         -> [1, 2]
      */
     public static int[] getOnlyPositiveNumbers(int[] arr) {
-        int negativesLenght = 0;
+        int negativesCount = 0;
         for(int i = 0; i < arr.length; i++) {
             if(arr[i] <= 0) {
-                negativesLenght++;
-                for(int j = i; j < arr.length - 1; j++) {
-                    arr[j] = arr[j+1];
-                }
+                negativesCount++;
             }
         }
-        int[] positives = new int[arr.length - negativesLenght];
-        for(int i = 0; i < positives.length; i++) {
-            positives[i] = arr[i];
+        int[] positives = new int[arr.length - negativesCount];
+        int positiveCounter = 0;
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] > 0) {
+                positives[positiveCounter] = arr[i];
+                positiveCounter++;
+            }
         }
         return positives;
     }
@@ -138,13 +136,22 @@ public class ArrayTasks {
      */
     public static int[][] sortRaggedArray(int[][] arr) {
         int[][] sortedRagged = new int[arr.length][arr[0].length];
-        for(int r = 0; r < arr.length; r++) {
-            for(int r1 = r; r1 < arr.length; r1++) {
-                if(arr[r].length > arr[r1].length) {
-                    int[] temp = arr[r];
-                    arr[r] = arr[r1];
-                    arr[r1] = temp;
+        while(true) {
+            int sortedCount = 0;
+            for(int i = 0; i < arr.length - 1; i++) {
+                if(arr[i].length > arr[i+1].length) {
+                    int[] temp = arr[i];
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = temp;
                 }
+            }
+            for(int i = 0; i < arr.length - 1; i++) {
+                if(arr[i].length < arr[i + 1].length) {
+                    sortedCount++;
+                }
+            }
+            if(sortedCount == arr[0].length) {
+                break;
             }
         }
         for(int r = 0; r < arr.length; r++) {
